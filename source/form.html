@@ -34,8 +34,94 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main-container">
+      <h1 class="main-title">Подбор программы</h1>
+      <p class="main-description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
+      <form class="nutrition-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="nutrition-form__cat">
+          <legend class="visually-hidden">Данные кота:</legend>
+          <label>Имя:*<input type="text" name="cat-name" value="Барсик" required></label>
+          <label>Вес (кг):*<input type="text" name="cat-weight" value="7" required></label>
+          <label>Возраст (лет):<input type="text" name="cat-age" value="7"></label>
+        </fieldset>
+
+        <fieldset class="nutrition-form__goal">
+          <legend class="visually-hidden">Цель:</legend>
+          <ul class="nutrition-form__goal-list">
+            <li class="nutrition-form__goal-item">
+              <label class="nutrition-form__goal-control">
+                <input class="nutrition-form__goal-control-input visually-hidden" type="radio" name="type" value="weight-loss" checked>
+                <span class="nutrition-form__goal-control-mark"></span>
+                <span class="nutrition-form__goal-control-title">Похудение</span>
+              </label>
+            </li>
+            <li class="nutrition-form__goal-item">
+              <label class="nutrition-form__goal-control">
+                <input class="nutrition-form__goal-control-input visually-hidden" type="radio" name="type" value="weight-gain">
+                <span class="nutrition-form__goal-control-mark"></span>
+                <span class="nutrition-form__goal-control-title">Набор массы</span>
+              </label>
+            </li>
+            <li class="nutrition-form__goal-item">
+              <label class="nutrition-form__goal-control">
+                <input class="nutrition-form__goal-control-input visually-hidden" type="radio" name="type" value="need-help">
+                <span class="nutrition-form__goal-control-mark"></span>
+                <span class="nutrition-form__goal-control-title">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="nutrition-form__owner">
+          <legend class="nutrition-form__title">Контактные данные (владельца кота)</legend>
+          <label>E-mail:*<input type="email" name="email" value="kuklachev@gmail.com" required></label>
+          <label>Телефон:*<input type="text" name="phone" value="8 (960) 900-60-90" required></label>
+        </fieldset>
+
+        <fieldset class="nutrition-form__comment">
+          <legend class="nutrition-form__title">Комментарий</legend>
+          <label class="visually-hidden" for="nutrition-form-comment">Ваш комментарий:</label>
+          <textarea name="nutrition-comment" rows="5" cols="33" id="nutrition-form-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+        <fieldset class="nutrition-form__additional">
+          <legend class="nutrition-form__title">Дополнительно</legend>
+          <ul class="nutrition-form__additional-list">
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="sweetener" checked>
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="drinking-water">
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="milk">
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title">Молоко</span>
+              </label>
+            </li>
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="vitamins">
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <button class="nutrition-form__apply-button" type="submit">Отправить заявку</button>
+        <span class="nutrition-form__note">* — Обязательные поля</span>
+      </form>
 
       <section class="contacts">
         <h2 class="contacts__title">Приглашаем  к сотрудничеству дилеров!</h2>
