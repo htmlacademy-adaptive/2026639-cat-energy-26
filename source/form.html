@@ -41,9 +41,18 @@
       <form class="nutrition-form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="nutrition-form__cat">
           <legend class="visually-hidden">Данные кота:</legend>
-          <label>Имя:*<input type="text" name="cat-name" value="Барсик" required></label>
-          <label>Вес (кг):*<input type="text" name="cat-weight" value="7" required></label>
-          <label>Возраст (лет):<input type="text" name="cat-age" value="7"></label>
+          <label class="nutrition-form__cat-label">
+            Имя:*
+            <input class="nutrition-form__cat-input" type="text" name="cat-name" value="Барсик" required>
+          </label>
+          <label class="nutrition-form__cat-label">
+            Вес (кг):*
+            <input class="nutrition-form__cat-input" type="text" name="cat-weight" value="7" required>
+          </label>
+          <label class="nutrition-form__cat-label">
+            Возраст (лет):
+            <input class="nutrition-form__cat-input" type="text" name="cat-age" value="7">
+          </label>
         </fieldset>
 
         <fieldset class="nutrition-form__goal">
