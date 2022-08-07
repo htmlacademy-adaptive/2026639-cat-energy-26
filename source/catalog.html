@@ -37,7 +37,7 @@
 
     <main class="main-container">
       <div class="catalog-page-heading">
-        <h1 class="catalog-page-heading-title main-title-text main-title-text--dark">Каталог продукции</h1>
+        <h1 class="catalog-page-heading__title main-title-text main-title-text--dark">Каталог продукции</h1>
       </div>
 
       <section class="goods">
@@ -216,28 +216,28 @@
         <h2 class="additional-goods__title">Дополнительные товары</h2>
         <ul class="additional-goods__list">
           <li class="additional-goods__item">
-            <h3 class="additional-goods__title">Сахарозаменитель</h3>
+            <h3 class="additional-goods__item-title">Сахарозаменитель</h3>
             <p class="additional-goods__description">1 упаковка (100 г)</p>
             <span class="additional-goods__price">200 ₽</span>
             <a class="additional-goods__order-link main-button" href="#">Заказать</a>
           </li>
 
           <li class="additional-goods__item">
-            <h3 class="additional-goods__title">Питьевая вода</h3>
+            <h3 class="additional-goods__item-title">Питьевая вода</h3>
             <p class="additional-goods__description">5 литров</p>
             <span class="additional-goods__price">50 ₽</span>
             <a class="additional-goods__order-link main-button" href="#">Заказать</a>
           </li>
 
           <li class="additional-goods__item">
-            <h3 class="additional-goods__title">Молоко</h3>
+            <h3 class="additional-goods__item-title">Молоко</h3>
             <p class="additional-goods__description">1 литр</p>
             <span class="additional-goods__price">100 ₽</span>
             <a class="additional-goods__order-link main-button" href="#">Заказать</a>
           </li>
 
           <li class="additional-goods__item">
-            <h3 class="additional-goods__title">Витамины</h3>
+            <h3 class="additional-goods__item-title">Витамины</h3>
             <p class="additional-goods__description">1 упаковка (30 г)</p>
             <span class="additional-goods__price">300 ₽</span>
             <a class="additional-goods__order-link main-button" href="#">Заказать</a>
@@ -246,11 +246,13 @@
       </section>
 
       <section class="promo">
-        <h2 class="visually-hidden">Акция.</h2>
-        <span class="promo__text">Закажите всё и получите чехол для кота в подарок!</span>
+        <div class="promo__wrapper">
+          <h2 class="visually-hidden">Акция.</h2>
+          <span class="promo__text">Закажите все<br> и получите чехол для<br> кота в подарок!</span>
+        </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts contacts--dark">
         <div class="contacts__heading">
           <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
