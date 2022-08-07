@@ -1,1 +1,45 @@
-// Начните писать стили здесь
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@import "page.less";
+@import "main-header.less";
+@import "main-container.less";
+@import "welcome.less";
+@import "main-button.less";
+@import "articles.less";
+@import "article.less";
+@import "advantages.less";
+@import "title-text.less";
+@import "description-text.less";
+@import "example.less";
+@import "slider.less";
+@import "contacts.less";
+@import "main-footer.less";
+@import "main-title-text";
+@import "form-page-heading.less";
+@import "nutrition-form.less";
+@import "input-label-text.less";
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
