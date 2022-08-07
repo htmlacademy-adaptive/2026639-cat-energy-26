@@ -1,0 +1,78 @@
+@main-header-min-height: 65px;
+@nav-toggle-size: 33px;
+
+.main-header {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  min-height: @main-header-min-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-header__logo {
+  margin: 0px;
+  height: 38px;
+}
+
+.main-header__company-name-logo {
+
+}
+
+.main-header__nav {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.main-header__nav-toggle {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: @nav-toggle-size;
+  width: @nav-toggle-size;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  /*Временное оформление кнопки до разработки гамбургера*/
+  box-shadow: inset 0px 0px 10px #000000;
+}
+
+.main-header__nav-list {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  position: fixed;
+  background-color: #ffffff;
+  width: 320px;
+  top: @main-header-min-height;
+  left: 0px;
+  right: 0px;
+}
+
+.main-header__nav-list--hidden {
+  display: none;
+}
+
+.main-header__nav-item {
+  min-height: 66px;
+  text-align: center;
+}
+
+.main-header__nav-item--current {
+
+}
+
+.main-header__nav-link {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  text-decoration: none;
+  color: #000000;
+}
