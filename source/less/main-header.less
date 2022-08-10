@@ -1,29 +1,110 @@
-@main-header-min-height: 65px;
-@nav-toggle-size: 33px;
-
 .main-header {
   box-sizing: border-box;
   margin: 0;
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 13px;
-  min-height: @main-header-min-height;
+  min-height: @main-header-mobile-min-height;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.main-header__logo {
-  margin: 0;
-  height: 38px;
+@media (min-width: @tablet-width) {
+  .main-header {
+    min-height: @main-header-tablet-min-height;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    min-height: @main-header-desktop-min-height;
+    padding: 110px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    z-index: 1;
+  }
+}
+
+// .main-header__logo-mobile {
+//   margin: 0;
+// }
+//
+// .main-header__logo-tablet {
+//   margin: 0;
+// }
+// .main-header__logo-desktop {
+//   margin: 0;
+// }
+
+@media (max-width: @tablet-width - 1) {
+  .main-header__logo-tablet {
+    display: none;
+  }
+
+  .main-header__logo-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .main-header__logo-mobile {
+    display: none;
+  }
+
+  .main-header__company-name-logo-mobile {
+    display: none;
+  }
+
+  .main-header__logo-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width - 1) {
+  .main-header__logo-mobile {
+    display: none;
+  }
+
+  .main-header__company-name-logo-mobile {
+    display: none;
+  }
+
+  .main-header__logo-tablet {
+    display: none;
+  }
 }
 
 .main-header__nav {
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  text-transform: uppercase;
   color: #000000;
   background-color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__nav {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__nav {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    z-index: 1;
+  }
 }
 
 .main-header__nav-toggle {
@@ -39,6 +120,18 @@
   box-shadow: inset 0 0 10px #000000;
 }
 
+@media (min-width: @tablet-width) {
+  .main-header__nav-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__nav-toggle {
+    display: none;
+  }
+}
+
 .main-header__nav-list {
   margin: 0;
   padding: 0;
@@ -46,19 +139,79 @@
   position: fixed;
   background-color: #ffffff;
   width: 320px;
-  top: @main-header-min-height;
+  top: @main-header-mobile-min-height;
   left: 0;
   right: 0;
   z-index: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__nav-list {
+    position: relative;
+    width: 500px;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__nav-list {
+  }
 }
 
 .main-header__nav-list--hidden {
   display: none;
 }
 
+@media (min-width: @tablet-width) {
+  .main-header__nav-list--hidden {
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__nav-list--hidden {
+    display: flex;
+  }
+}
+
 .main-header__nav-item {
   min-height: 66px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__nav-item {
+    min-height: 0px;
+  }
+
+  .main-header__nav-item:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__nav-item {
+    .main-header__nav-item:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__nav-item--current {
+    border-bottom: 2px solid #68b738;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__nav-item--current {
+    border-bottom: 2px solid #ffffff;
+  }
 }
 
 .main-header__nav-link {
@@ -67,4 +220,16 @@
   padding-bottom: 24px;
   text-decoration: none;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__nav-link {
+  }
 }
