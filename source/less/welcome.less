@@ -1,9 +1,7 @@
 .welcome {
   display: flex;
+  position: relative;
   flex-direction: column;
-  // background-image: url("../img/welcome-background-layer.png"), url("../img/welcome-background.jpg");
-  // background-repeat: no-repeat;
-  // background-position: top;
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
@@ -20,6 +18,7 @@
 
 @media (min-width: @desktop-width) {
   .welcome {
+    position: relative;
     min-height: 593px;
     padding-top: 96px;
     padding-left: 110px;
@@ -31,15 +30,15 @@
 .welcome__background {
   position: absolute;
   left: 0;
-  top: @main-header-mobile-min-height;
+  top: 0;
   width: 320px;
   height: 302px;
-  background-image: url("../img/welcome-background-layer.png"), url("../img/welcome-background.jpg");
+  background-image: url("../img/welcome-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1){
   .welcome__background {
     display: none;
   }
@@ -47,15 +46,14 @@
 
 @media (min-width: @desktop-width) {
   .welcome__background {
-    display: block;
-    left: auto;
-    top: 0;
+    position: absolute;
+    left: 50%;
+    top: -@main-header-desktop-min-height;
     width: 720px;
     height: 694px;
-    background-image: url("../img/welcome-background-desktop.png");
+    background-image: url("../img/welcome-background-desktop.jpg");
     background-repeat: no-repeat;
     background-position: top;
-    transform: translateX(85%);
   }
 }
 
@@ -129,9 +127,59 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .welcome__image {
-    position: absolute;
+//.welcome__image-*
+
+@media (max-width: @tablet-width - 1) {
+  .welcome__image-mobile {
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+
+  .welcome__image-tablet {
+    display: none;
+  }
+
+  .welcome__image-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .welcome__image-mobile {
+    display: none;
+  }
+
+  .welcome__image-tablet {
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+
+  .welcome__image-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width - 1) {
+  .welcome__image-mobile {
+    display: none;
+  }
+
+  .welcome__image-tablet {
+    display: none;
+  }
+
+  .welcome__image-desktop {
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
   }
 }
 

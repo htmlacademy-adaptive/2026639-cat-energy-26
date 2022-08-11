@@ -31,17 +31,6 @@
   }
 }
 
-// .main-header__logo-mobile {
-//   margin: 0;
-// }
-//
-// .main-header__logo-tablet {
-//   margin: 0;
-// }
-// .main-header__logo-desktop {
-//   margin: 0;
-// }
-
 @media (max-width: @tablet-width - 1) {
   .main-header__logo-tablet {
     display: none;
@@ -52,7 +41,7 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
   .main-header__logo-mobile {
     display: none;
   }
@@ -66,7 +55,7 @@
   }
 }
 
-@media (min-width: @desktop-width - 1) {
+@media (min-width: @desktop-width) {
   .main-header__logo-mobile {
     display: none;
   }
@@ -81,12 +70,14 @@
 }
 
 .main-header__nav {
+  display: flex;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
   color: #000000;
   background-color: #ffffff;
+  z-index: 2;
 }
 
 @media (min-width: @tablet-width) {
@@ -103,7 +94,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    z-index: 1;
+    background-color: transparent;
   }
 }
 
@@ -142,22 +133,30 @@
   top: @main-header-mobile-min-height;
   left: 0;
   right: 0;
-  z-index: 1;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .main-header__nav-list {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-header__nav-list {
+    display: flex;
+    justify-content: flex-end;
     position: relative;
     width: 500px;
     top: auto;
     left: auto;
     right: auto;
-    z-index: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-header__nav-list {
+    background-color: transparent;
   }
 }
 
@@ -168,8 +167,7 @@
 @media (min-width: @tablet-width) {
   .main-header__nav-list--hidden {
     display: flex;
-    justify-content: flex-end;
-    width: 500px;
+
   }
 }
 
@@ -186,6 +184,7 @@
 
 @media (min-width: @tablet-width) {
   .main-header__nav-item {
+    // *** Разобраться!!! ***
     min-height: 0px;
   }
 
@@ -231,5 +230,6 @@
 
 @media (min-width: @desktop-width) {
   .main-header__nav-link {
+    color: #ffffff;
   }
 }
