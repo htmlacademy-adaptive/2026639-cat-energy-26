@@ -1,15 +1,30 @@
 .form-page-heading {
+  padding: 20px;
   padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px;
+    padding-top: 41px;
+    padding-bottom: 51px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 110px;
+    padding-top: 60px;
+    padding-bottom: 51px;
+  }
 }
 
 .form-page-heading__title {
   margin: 0;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
 }
 
-.form-page-heading-description {
+.form-page-heading__description {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -17,4 +32,10 @@
   color: #000000;
   margin: 0;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+  }
 }

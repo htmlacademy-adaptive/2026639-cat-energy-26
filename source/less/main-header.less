@@ -208,7 +208,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-header__nav-item--current {
+  .main-header__nav-item--current:not(.main-header__nav-item--dark ) {
     border-bottom: 2px solid #ffffff;
   }
 }
@@ -229,7 +229,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-header__nav-link {
+  .main-header__nav-link:not(.main-header__nav-link--dark) {
     color: #ffffff;
   }
 }
