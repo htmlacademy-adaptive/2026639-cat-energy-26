@@ -2,6 +2,26 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 141px;
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 143px;
+    padding: 110px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
 }
 
 .goods__item {
@@ -9,6 +29,20 @@
   padding-top: 19px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    height: 430px;
+    background-color: #f2f2f2;
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 431px;
+    background-color: #f2f2f2;
+  }
 }
 
 .goods__link {

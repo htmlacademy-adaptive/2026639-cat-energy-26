@@ -5,19 +5,15 @@
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
-}
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
-  .welcome {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     background-image: none;
     padding-top: 48px;
     padding-left: 30px;
     padding-right: 30px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .welcome {
+  @media (min-width: @desktop-width) {
     position: relative;
     min-height: 593px;
     padding-top: 96px;
@@ -36,16 +32,12 @@
   background-image: url("../img/welcome-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
-}
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width - 1){
-  .welcome__background {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     display: none;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .welcome__background {
+  @media (min-width: @desktop-width) {
     position: absolute;
     left: 50%;
     top: -@main-header-desktop-min-height;
@@ -63,19 +55,15 @@
   text-align: center;
   color: #ffffff;
   z-index: 1;
-}
 
-@media (min-width: @tablet-width) {
-  .welcome__title {
+  @media (min-width: @tablet-width) {
     color: #000000;
     text-align: left;
     padding-left: 87px;
     padding-right: 44px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .welcome__title {
+  @media (min-width: @desktop-width) {
     width: 440px;
     padding-left: 80px;
     padding-right: 0;
@@ -92,10 +80,8 @@
   margin-bottom: 29px;
   text-align: center;
   z-index: 1;
-}
 
-@media (min-width: @tablet-width) {
-  .welcome__slogan {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: #000000;
@@ -103,31 +89,13 @@
     padding-left: 87px;
     padding-right: 44px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .welcome__slogan {
+  @media (min-width: @desktop-width) {
     width: 440px;
     padding-left: 80px;
     padding-right: 0;
   }
 }
-
-.welcome__image-mobile {
-  display: block;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
-}
-
-@media (min-width: @tablet-width) {
-  .welcome__image {
-    order: 4;
-  }
-}
-
-//.welcome__image-*
 
 @media (max-width: @tablet-width - 1) {
   .welcome__image-mobile {
@@ -199,10 +167,8 @@
   min-width: 280px;
   padding: 11px;
   align-content: center;
-}
 
-@media (min-width: @tablet-width) {
-  .welcome__link {
+  @media (min-width: @tablet-width) {
     width: 244px;
     font-size: 20px;
     line-height: 20px;

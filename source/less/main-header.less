@@ -8,10 +8,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-}
 
-@media (min-width: @tablet-width) {
-  .main-header {
+  @media (min-width: @tablet-width) {
     min-height: @main-header-tablet-min-height;
     align-items: center;
     justify-content: flex-start;
@@ -19,10 +17,8 @@
     padding-top: 24px;
     padding-bottom: 24px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-header {
+  @media (min-width: @desktop-width) {
     min-height: @main-header-desktop-min-height;
     padding: 110px;
     padding-top: 24px;
@@ -78,19 +74,15 @@
   color: #000000;
   background-color: #ffffff;
   z-index: 2;
-}
 
-@media (min-width: @tablet-width) {
-  .main-header__nav {
+  @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     margin-left: auto;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-header__nav {
+  @media (min-width: @desktop-width) {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
@@ -109,16 +101,8 @@
   cursor: pointer;
   /*Временное оформление кнопки до разработки гамбургера*/
   box-shadow: inset 0 0 10px #000000;
-}
 
-@media (min-width: @tablet-width) {
-  .main-header__nav-toggle {
-    display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-header__nav-toggle {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
@@ -133,17 +117,13 @@
   top: @main-header-mobile-min-height;
   left: 0;
   right: 0;
-}
 
-@media (max-width: @tablet-width - 1) {
-  .main-header__nav-list {
+  @media (max-width: @tablet-width - 1) {
     left: 50%;
     transform: translateX(-50%);
   }
-}
 
-@media (min-width: @tablet-width) {
-  .main-header__nav-list {
+  @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-end;
     position: relative;
@@ -152,27 +132,16 @@
     left: auto;
     right: auto;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-header__nav-list {
+  @media (min-width: @desktop-width) {
     background-color: transparent;
   }
 }
 
 .main-header__nav-list--hidden {
   display: none;
-}
 
-@media (min-width: @tablet-width) {
-  .main-header__nav-list--hidden {
-    display: flex;
-
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-header__nav-list--hidden {
+  @media (min-width: @tablet-width) {
     display: flex;
   }
 }
@@ -180,36 +149,31 @@
 .main-header__nav-item {
   min-height: 66px;
   text-align: center;
-}
 
-@media (min-width: @tablet-width) {
-  .main-header__nav-item {
-    // *** Разобраться!!! ***
-    min-height: 0px;
+  @media (min-width: @tablet-width) {
+    min-height: auto;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
   }
 
-  .main-header__nav-item:not(:last-child) {
-    margin-right: 35px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-header__nav-item {
-    .main-header__nav-item:not(:last-child) {
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
       margin-right: 34px;
     }
   }
 }
 
-@media (min-width: @tablet-width) {
-  .main-header__nav-item--current {
+.main-header__nav-item--current {
+  @media (min-width: @tablet-width) {
     border-bottom: 2px solid #68b738;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-header__nav-item--current:not(.main-header__nav-item--dark ) {
-    border-bottom: 2px solid #ffffff;
+  @media (min-width: @desktop-width) {
+    &:not(.main-header__nav-item--dark) {
+      border-bottom: 2px solid #ffffff;
+    }
   }
 }
 
@@ -219,17 +183,15 @@
   padding-bottom: 24px;
   text-decoration: none;
   color: #000000;
-}
 
-@media (min-width: @tablet-width) {
-  .main-header__nav-link {
+  @media (min-width: @tablet-width) {
     padding-top: 10px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-header__nav-link:not(.main-header__nav-link--dark) {
-    color: #ffffff;
+  @media (min-width: @desktop-width) {
+    &:not(.main-header__nav-link--dark) {
+      color: #ffffff;
+    }
   }
 }
