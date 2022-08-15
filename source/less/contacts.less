@@ -1,13 +1,30 @@
 .contacts {
-  padding-top: 26px;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .contacts__heading {
   display: flex;
   justify-content: space-between;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 26px;
+  padding: 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px;
+    padding-top: 60px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 80px;
+    padding-top: 60px;
+    padding-bottom: 56px;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .contacts__title {
@@ -17,7 +34,7 @@
   color: #000000;
   text-transform: uppercase;
   width: 139px;
-  margin: 0px;
+  margin: 0;
   margin-right: 2px;
 }
 
@@ -31,6 +48,10 @@
 
 .contacts__map {
   height: 362px;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }
 
 .contacts--dark {

@@ -1,13 +1,24 @@
 .main-footer {
+  display: flex;
+  flex-direction: column;
   background-color: #f2f2f2;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 22px;
-}
 
-.main-footer__wrapper {
-  display: flex;
-  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    padding-top: 58px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
 }
 
 .main-footer__company-name-logo {
@@ -17,14 +28,26 @@
   padding-bottom: 32px;
   border-bottom: 1px solid #d9d9d9;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .main-footer__social-list {
   list-style-type: none;
   margin-top: 23px;
-  padding: 0px;
+  padding: 0;
   padding-bottom: 32px;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .main-footer__social-list-wrapper {
@@ -50,4 +73,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+  }
 }

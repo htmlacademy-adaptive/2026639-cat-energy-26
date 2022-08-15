@@ -1,28 +1,56 @@
-@advantages-image-healty-url: url('../img/advantages-image-healty.svg');
-@advantages-image-simple-cook-url: url('../img/advantages-image-simple-cook.svg');
-@advantages-image-simple-meal-url: url('../img/advantages-image-simple-meal.svg');
-@advantages-image-fast-changes-url: url('../img/advantages-image-fast-changes.svg');
+@advantages-image-healty-url: url("../img/advantages-image-healty.svg");
+@advantages-image-simple-cook-url: url("../img/advantages-image-simple-cook.svg");
+@advantages-image-simple-meal-url: url("../img/advantages-image-simple-meal.svg");
+@advantages-image-fast-changes-url: url("../img/advantages-image-fast-changes.svg");
 
 .advantages {
   background-color: #ffffff;
   padding: 20px;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 53px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    border: none;
+  }
 }
 
 .advantages__title {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .advantages__list {
-  margin: 0px;
-  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .advantages__item {
-  margin-left: 80px;
+  box-sizing: border-box;
+  padding-left: 80px;
 
   &::before {
     position: absolute;
@@ -32,12 +60,31 @@
     transform: translateX(-80px) translateY(-2px);
     width: 60px;
     height: 60px;
+    background-color: #68b738; // Выгрузить иконки без фона
   }
 
   &:not(:last-child) {
     margin-bottom: 26px;
   }
 
+  @media (min-width: @tablet-width) {
+    width: 245px;
+    min-height: 280px;
+    padding-top: 151px;
+    padding-left: 0;
+    margin-right: 85px;
+    margin-bottom: 37px;
+
+    &::before {
+      transform: translateY(-111px);
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+    }
+  }
 }
 
 .advantages__item--healty {
@@ -65,5 +112,6 @@
 }
 
 .advantages__text {
-  margin: 0px;
+  margin: 0;
+  color: #444444;
 }

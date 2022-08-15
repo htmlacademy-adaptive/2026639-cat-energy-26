@@ -1,13 +1,41 @@
 .nutrition-form {
   padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px;
+    padding-top: 0;
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+    padding-top: 0;
+    padding-bottom: 82px;
+  }
+}
+
+.nutrition-form__cat-relative-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 60px;
+  }
 }
 
 .nutrition-form__cat {
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   padding-bottom: 24px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 57px;
+    border: none;
+  }
 }
 
 .nutrition-form__cat-label {
@@ -23,48 +51,77 @@
 .nutrition-form__cat-input {
   box-sizing: border-box;
   flex-grow: 1;
-  margin: 0px;
+  margin: 0;
   margin-left: 12px;
   padding: 16px;
   padding-top: 13px;
   padding-bottom: 14px;
   border: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 14px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .nutrition-form__goal {
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   padding-top: 29px;
   padding-bottom: 25px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    padding: 28px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 75px;
+    border: 1px solid #e7e7e7;
+  }
 }
 
 .nutrition-form__goal-list {
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .nutrition-form__goal-item:not(:last-child) {
   margin-bottom: 25px;
 }
 
-.nutrition-form__goal-control-mark {
-
-}
-
 .nutrition-form__goal-control-title {
   margin-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 60px;
+  }
 }
 
 .nutrition-form__owner {
-  margin: 0px;
+  margin: 0;
   margin-top: 26px;
   padding: 20px;
   padding-top: 35px;
   padding-bottom: 25px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    padding-top: 14px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 60px;
+  }
 }
 
 .nutrition-form__title {
@@ -72,6 +129,12 @@
   font-size: 24px;
   line-height: 26px;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 62px;
+  }
 }
 
 .nutrition-form__owner-label {
@@ -87,7 +150,7 @@
 .nutrition-form__owner-input {
   box-sizing: border-box;
   flex-grow: 1;
-  margin: 0px;
+  margin: 0;
   margin-left: 12px;
   padding: 16px;
   padding-top: 13px;
@@ -96,51 +159,94 @@
 }
 
 .nutrition-form__comment {
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   padding-top: 38px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    padding-top: 14px;
+    padding-bottom: 65px;
+  }
 }
 
 .nutrition-form__comment-area {
   box-sizing: border-box;
-  margin: 0px;
+  margin: 0;
   padding: 10px;
   padding-left: 15px;
   padding-right: 12px;
+  width: 100%;
+  height: 150px;
   border: 1px solid #e7e7e7;
 
-  &::placeholder{
+  &::placeholder {
     color: #444444;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 174px;
   }
 }
 
 .nutrition-form__additional {
-  margin: 0px;
+  margin: 0;
   margin-top: 23px;
   padding: 20px;
   padding-top: 39px;
   padding-bottom: 21px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 59px;
+  }
 }
 
 .nutrition-form__additional-list {
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 32px;
+    grid-column-gap: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 81px;
+  }
 }
 
 .nutrition-form__additional-item {
-  margin-left: 46px;
+  padding-left: 46px;
 
   &:not(:last-child) {
     margin-bottom: 24px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 49px;
+  }
 }
 
-.nutrition-form__additional-control-title {
-
+.nutrition-form__bottom-wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column-gap: 81px;
+  }
 }
 
 .nutrition-form__apply-button {
@@ -148,6 +254,10 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .nutrition-form__note {
@@ -162,4 +272,11 @@
   padding-left: 20px;
   padding-right: 20px;
   word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
 }

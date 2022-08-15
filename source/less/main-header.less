@@ -1,72 +1,180 @@
-@main-header-min-height: 65px;
-@nav-toggle-size: 33px;
-
 .main-header {
   box-sizing: border-box;
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 13px;
-  min-height: @main-header-min-height;
+  min-height: @main-header-mobile-min-height;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media (min-width: @tablet-width) {
+    min-height: @main-header-tablet-min-height;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: @main-header-desktop-min-height;
+    padding: 110px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    z-index: 1;
+  }
 }
 
-.main-header__logo {
-  margin: 0px;
-  height: 38px;
+@media (max-width: @tablet-width - 1) {
+  .main-header__logo-tablet {
+    display: none;
+  }
+
+  .main-header__logo-desktop {
+    display: none;
+  }
 }
 
-.main-header__company-name-logo {
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  .main-header__logo-mobile {
+    display: none;
+  }
 
+  .main-header__company-name-logo-mobile {
+    display: none;
+  }
+
+  .main-header__logo-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__logo-mobile {
+    display: none;
+  }
+
+  .main-header__company-name-logo-mobile {
+    display: none;
+  }
+
+  .main-header__logo-tablet {
+    display: none;
+  }
 }
 
 .main-header__nav {
+  display: flex;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  text-transform: uppercase;
   color: #000000;
   background-color: #ffffff;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: transparent;
+  }
 }
 
 .main-header__nav-toggle {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   height: @nav-toggle-size;
   width: @nav-toggle-size;
   background-color: transparent;
   border: none;
   cursor: pointer;
   /*Временное оформление кнопки до разработки гамбургера*/
-  box-shadow: inset 0px 0px 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-header__nav-list {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   position: fixed;
   background-color: #ffffff;
   width: 320px;
-  top: @main-header-min-height;
-  left: 0px;
-  right: 0px;
-  z-index: 1;
+  top: @main-header-mobile-min-height;
+  left: 0;
+  right: 0;
+
+  @media (max-width: @tablet-width - 1) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 500px;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .main-header__nav-list--hidden {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .main-header__nav-item {
   min-height: 66px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: auto;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
 }
 
 .main-header__nav-item--current {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid #68b738;
+  }
 
+  @media (min-width: @desktop-width) {
+    &:not(.main-header__nav-item--dark) {
+      border-bottom: 2px solid #ffffff;
+    }
+  }
 }
 
 .main-header__nav-link {
@@ -75,4 +183,15 @@
   padding-bottom: 24px;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(.main-header__nav-link--dark) {
+      color: #ffffff;
+    }
+  }
 }

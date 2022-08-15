@@ -3,9 +3,26 @@
   padding-left: 20px;
   padding-right: 20px;
   border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+    padding-top: 41;
+    padding-bottom: 75px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+    padding-top: 61;
+    padding-bottom: 150px;
+  }
 }
 
 .catalog-page-heading__title {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }

@@ -1,21 +1,47 @@
 .example {
+  display: flex;
+  flex-direction: column;
   background-color: #eaeaea;
   padding: 20px;
   padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+    padding-top: 43px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 110px;
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
 }
 
 .example__title {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 40px;
 }
 
 .example__text {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 20px;
 }
 
-.example__results-list {
+.example__results-wrapper {
+  display: flex;
+  flex-direction: column;
 
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.example__results-list {
+  display: flex;
 }
 
 .example__number {
