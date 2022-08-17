@@ -1,5 +1,9 @@
 .main-header {
+  position: fixed;
   box-sizing: border-box;
+  z-index: 3;
+  background-color: #ffffff;
+  width: inherit;
   margin: 0;
   padding: 20px;
   padding-top: 10px;
@@ -7,7 +11,8 @@
   min-height: @main-header-mobile-min-height;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     min-height: @main-header-tablet-min-height;
@@ -90,21 +95,96 @@
   }
 }
 
+.main-header__nav--nojs .main-header__nav-toggle {
+  display: none;
+}
+
+.main-header__nav--nojs .main-header__nav-hamburger {
+  display: none;
+}
+
+.main-header__nav--nojs .main-header__nav-list {
+  position: static;
+}
+
 .main-header__nav-toggle {
+  position: relative;
+  display: block;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   height: @nav-toggle-size;
   width: @nav-toggle-size;
-  background-color: transparent;
-  border: none;
   cursor: pointer;
-  /*Временное оформление кнопки до разработки гамбургера*/
-  box-shadow: inset 0 0 10px #000000;
+  opacity: 0;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.main-header__nav-hamburger {
+  position: absolute;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 16px;
+  width: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s ease-in-out;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__nav-hamburger-line {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background: #000000;
+}
+
+.main-header__nav-hamburger-line--1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.main-header__nav-hamburger-line--2 {
+  transform-origin: 0% 0%;
+  transition: transform 0.1s ease-in-out;
+}
+
+.main-header__nav-hamburger-line--3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.main-header__nav-toggle:checked ~
+.main-header__nav-hamburger
+.main-header__nav-hamburger-line--1 {
+  transform: rotate(45deg);
+}
+
+.main-header__nav-toggle:checked ~
+.main-header__nav-hamburger
+.main-header__nav-hamburger-line--2 {
+  transform: scaleY(0);
+}
+
+.main-header__nav-toggle:checked ~
+.main-header__nav-hamburger
+.main-header__nav-hamburger-line--3 {
+  transform: rotate(-45deg) translateX(-1px) translateY(1px);
+}
+
+.main-header__nav-toggle:checked ~
+.main-header__nav-hamburger {
+  transform: translateX(3px);
 }
 
 .main-header__nav-list {
@@ -113,14 +193,14 @@
   list-style-type: none;
   position: fixed;
   background-color: #ffffff;
-  width: 320px;
+  // width: 320px;
   top: @main-header-mobile-min-height;
   left: 0;
   right: 0;
 
   @media (max-width: @tablet-width - 1) {
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 50%;
+    // transform: translateX(-50%);
   }
 
   @media (min-width: @tablet-width) {
@@ -138,11 +218,16 @@
   }
 }
 
-.main-header__nav-list--hidden {
-  display: none;
-
-  @media (min-width: @tablet-width) {
+.main-header__nav--opened .main-header__nav-list{
+  @media (max-width: @tablet-width - 1) {
     display: flex;
+    flex-direction: column;
+  }
+}
+
+.main-header__nav--closed .main-header__nav-list{
+  @media (max-width: @tablet-width - 1) {
+    display: none;
   }
 }
 

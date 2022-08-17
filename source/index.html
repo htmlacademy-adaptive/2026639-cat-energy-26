@@ -25,13 +25,17 @@
         <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy.">
       </a>
 
-      <nav class="main-header__nav oswald-font-text">
-        <button class="main-header__nav-toggle" type="button" name="nav-toggle">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
+      <!-- Для отображения меню заменить модификатор объекта main-header__nav с closed на opened -->
+      <nav class="main-header__nav main-header__nav--opened main-header__nav--nojs oswald-font-text">
+        <input class="main-header__nav-toggle" type="checkbox" name="nav-toggle">
+        <span class="visually-hidden">Открыть меню.</span>
+        <div class="main-header__nav-hamburger">
+          <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--1"></span>
+          <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--2"></span>
+          <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--3"></span>
+        </div>
 
-        <!-- Для отображения меню удалить класс main-header__nav-list-hidden -->
-        <ul class="main-header__nav-list main-header__nav-list--hidden">
+        <ul class="main-header__nav-list">
           <li class="main-header__nav-item main-header__nav-item--current">
             <a class="main-header__nav-link">Главная</a>
           </li>
@@ -42,6 +46,7 @@
             <a class="main-header__nav-link" href="form.html">Подбор программы</a>
           </li>
         </ul>
+
       </nav>
     </header>
 
@@ -198,5 +203,7 @@
         </a>
       </div>
     </footer>
+
+
   </body>
 </html>
