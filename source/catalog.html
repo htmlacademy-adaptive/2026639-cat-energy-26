@@ -9,26 +9,28 @@
 
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo-mobile" href="index.html">
-        <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy.">
-      </a>
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__logo-mobile" href="index.html">
+          <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy.">
+        </a>
 
-      <a class="main-header__company-name-logo-mobile" href="index.html">
-        <img src="img/company-name-logo-mobile.svg" width="101" height="18" alt="Cat Energy.">
-      </a>
+        <a class="main-header__company-name-logo-mobile" href="index.html">
+          <img src="img/company-name-logo-mobile.svg" width="101" height="18" alt="Cat Energy.">
+        </a>
 
-      <a class="main-header__logo-tablet" href="index.html">
-        <img src="img/logo-tablet.svg" width="174" height="52" alt="Логотип Cat Energy.">
-      </a>
+        <a class="main-header__logo-tablet" href="index.html">
+          <img src="img/logo-tablet.svg" width="174" height="52" alt="Логотип Cat Energy.">
+        </a>
 
-      <a class="main-header__logo-desktop" href="index.html">
-        <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy.">
-      </a>
+        <a class="main-header__logo-desktop" href="index.html">
+          <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy.">
+        </a>
+      </div>
 
       <!-- Для отображения меню заменить модификатор объекта main-header__nav с closed на opened -->
-      <nav class="main-header__nav main-header__nav--closed oswald-font-text">
-        <input class="main-header__nav-toggle" type="checkbox" name="nav-toggle">
-        <span class="visually-hidden">Открыть меню.</span>
+      <nav class="main-header__nav main-header__nav--opened main-header__nav--nojs oswald-font-text">
+        <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
+        <input class="main-header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
         <div class="main-header__nav-hamburger">
           <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--1"></span>
           <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--2"></span>
@@ -327,5 +329,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
