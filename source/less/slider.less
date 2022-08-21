@@ -1,3 +1,5 @@
+@slider-button-active-color: rgba(197, 224, 180, 0.6);
+
 .slider {
   position: relative;
   margin-left: 0;
@@ -26,10 +28,16 @@
 
 .slider__before {
   position: absolute;
+  margin: auto;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  clip: rect(auto, 140px, auto, auto);
+
+  @media (min-width: @tablet-width) {
+    clip: rect(auto, 280px, auto, auto);
+  }
 }
 
 .slider__after {
@@ -38,23 +46,87 @@
   right: 0;
   top: 0;
   bottom: 0;
+  clip: rect(auto, auto, auto, 140px);
+
+  @media (min-width: @tablet-width) {
+    clip: rect(auto, auto, auto, 280px);
+  }
 }
 
 .slider__image {
+  position: absolute;
   display: block;
-  margin: auto auto auto auto;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .slider__image--tablet {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__image--mobile {
+    display: none;
+  }
 }
 
 .slider__button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #666666;
-  border-radius: 50%;
+  width: 4px;
+  height: 256px;
   padding: 0;
-  background-color: #ffffff;
+  margin: 0;
+  border: none;
+  border-radius: 2px;
+  background-color: #666666;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666666;
+    border-radius: 50%;
+    background-image: url("../img/slider-button-image.svg");
+    background-position: center;
+    background-size: 100%;
+    background-color: #666666;
+    padding: 0;
+  }
+
+  &:hover {
+    background-color: @basic-green;
+
+    &::before {
+      background-color: @basic-green;
+      border-color: @basic-green;
+    }
+  }
+
+  &:active {
+    background-color: @slider-button-active-color;
+
+    &::before {
+      background-color: @slider-button-active-color;
+      border-color: @slider-button-active-color;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
 }

@@ -34,6 +34,18 @@
     padding: 0;
     border: none;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-footer__social-list {
@@ -69,6 +81,18 @@
   top: 5px;
 }
 
+.main-footer__button:hover .main-footer__icon {
+  color: @basic-green;
+}
+
+.main-footer__button:focus .main-footer__icon {
+  color: @basic-green;
+}
+
+.main-footer__button:active .main-footer__icon {
+  opacity: 0.3;
+}
+
 .main-footer__academy {
   display: flex;
   justify-content: space-between;
@@ -76,5 +100,35 @@
 
   @media (min-width: @tablet-width) {
     width: 163px;
+  }
+}
+
+.main-footer__academy-company-name-logo {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-footer__academy-logo {
+  color: #666666;
+
+  &:hover {
+    color: @basic-green;
+  }
+
+  &:focus {
+    color: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
