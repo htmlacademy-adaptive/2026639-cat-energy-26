@@ -1,13 +1,92 @@
 .show-more {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 20px;
-  padding-top: 25px;
+  padding-top: 78px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ebebeb;
+
+  &::before {
+    position: absolute;
+    top: 40px;
+    left: auto;
+    right: auto;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+  }
+
+  &::after {
+    position: absolute;
+    top: 40px;
+    left: auto;
+    right: auto;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    width: 324px;
+    padding: 38px;
+    padding-top: 234px;
+    padding-bottom: 40px;
+
+    &::before {
+      width: 60px;
+      top: 155px;
+    }
+
+    &::after {
+      width: 60px;
+      top: 155px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    padding-top: 240px;
+
+    &::before {
+      top: 161px;
+    }
+
+    &::after {
+      top: 161px;
+    }
+  }
+}
+
+.show-more__background {
+  display: none;
+  border: 2px solid #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    display: block;
+    top: 73px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 80px;
+  }
 }
 
 .show-more__link {
   text-decoration: none;
   text-transform: uppercase;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .show-more__title {
@@ -17,9 +96,21 @@
   line-height: 20px;
   color: #222222;
   text-align: center;
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 8px;
   word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    width: 167px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+  }
 }
 
 .show-more__description {
@@ -31,4 +122,10 @@
   margin: 0;
   margin-bottom: 21px;
   word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+  }
 }
