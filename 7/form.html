@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Кэт энерджи – подбор программы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <base href="https://htmlacademy-adaptive.github.io/2026639-cat-energy-26/7/">
+</head>
+
+  <body class="page__body">
+    <header class="main-header">
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__logo-mobile" href="index.html">
+          <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy.">
+        </a>
+
+        <a class="main-header__company-name-logo-mobile" href="index.html">
+          <img src="img/company-name-logo-mobile.svg" width="101" height="18" alt="Cat Energy.">
+        </a>
+
+        <a class="main-header__logo-tablet" href="index.html">
+          <img src="img/logo-tablet.svg" width="174" height="52" alt="Логотип Cat Energy.">
+        </a>
+
+        <a class="main-header__logo-desktop" href="index.html">
+          <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy.">
+        </a>
+      </div>
+
+      <!-- Для отображения меню заменить модификатор объекта main-header__nav с closed на opened -->
+      <nav class="main-header__nav main-header__nav--opened main-header__nav--nojs oswald-font-text">
+        <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
+        <input class="main-header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
+        <div class="main-header__nav-hamburger">
+          <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--1"></span>
+          <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--2"></span>
+          <span class="main-header__nav-hamburger-line main-header__nav-hamburger-line--3"></span>
+        </div>
+
+        <ul class="main-header__nav-list">
+          <li class="main-header__nav-item main-header__nav-item--dark">
+            <a class="main-header__nav-link main-header__nav-link--dark" href="index.html">Главная</a>
+          </li>
+          <li class="main-header__nav-item main-header__nav-item--dark">
+            <a class="main-header__nav-link main-header__nav-link--dark" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-header__nav-item main-header__nav-item--dark main-header__nav-item--current">
+            <a class="main-header__nav-link main-header__nav-link--dark">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="form-page-heading oswald-font-text">
+        <h1 class="form-page-heading__title main-title-text main-title-text--dark">Подбор программы</h1>
+        <p class="form-page-heading__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
+      </div>
+
+      <form class="nutrition-form oswald-font-text" action="https://echo.htmlacademy.ru/" method="get">
+        <div class="nutrition-form__cat-relative-wrapper">
+          <fieldset class="nutrition-form__cat">
+            <legend class="visually-hidden">Данные кота:</legend>
+
+            <div class="nutrition-form__cat-input-wrapper">
+              <label class="nutrition-form__cat-label input-label-text" for="cat-name">Имя:*</label>
+              <input class="nutrition-form__cat-input input-label-text" type="text" id="cat-name" name="cat-name" value="Барсик" required>
+            </div>
+
+            <div class="nutrition-form__cat-input-wrapper">
+              <label class="nutrition-form__cat-label input-label-text" for="cat-weight">Вес (кг):*</label>
+              <input class="nutrition-form__cat-input input-label-text" type="text" id="cat-weight" name="cat-weight" value="7" required>
+            </div>
+
+            <div class="nutrition-form__cat-input-wrapper">
+              <label class="nutrition-form__cat-label input-label-text" for="cat-age">Возраст (лет):</label>
+              <input class="nutrition-form__cat-input input-label-text" type="text" id="cat-age" name="cat-age" value="7">
+            </div>
+          </fieldset>
+
+          <fieldset class="nutrition-form__goal">
+            <legend class="visually-hidden">Цель:</legend>
+            <ul class="nutrition-form__goal-list">
+              <li class="nutrition-form__goal-item">
+                <label class="nutrition-form__goal-control">
+                  <input class="nutrition-form__goal-control-input visually-hidden" type="radio" name="type" value="weight-loss" checked>
+                  <span class="nutrition-form__goal-control-mark"></span>
+                  <span class="nutrition-form__goal-control-title input-label-text">Похудение</span>
+                </label>
+              </li>
+              <li class="nutrition-form__goal-item">
+                <label class="nutrition-form__goal-control">
+                  <input class="nutrition-form__goal-control-input visually-hidden" type="radio" name="type" value="weight-gain">
+                  <span class="nutrition-form__goal-control-mark"></span>
+                  <span class="nutrition-form__goal-control-title input-label-text">Набор массы</span>
+                </label>
+              </li>
+              <li class="nutrition-form__goal-item">
+                <label class="nutrition-form__goal-control">
+                  <input class="nutrition-form__goal-control-input visually-hidden" type="radio" name="type" value="need-help">
+                  <span class="nutrition-form__goal-control-mark"></span>
+                  <span class="nutrition-form__goal-control-title input-label-text">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <fieldset class="nutrition-form__owner">
+          <legend class="nutrition-form__title line-marked-heading">Контактные данные<br> (владельца кота)</legend>
+          <label class="nutrition-form__owner-label input-label-text">
+            E-mail:*
+            <input class="nutrition-form__owner-input input-label-text" type="email" name="email" value="kuklachev@gmail.com" required>
+            <svg class="nutrition-form__owner-input-icon" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="currentColor" stroke-width="1.3" d="M.65 6v8M17.65 6v8M0 13.35h18M0 1.35h18M17.35 3.18 9 9.68.65 3.18V1.65h16.7v1.53Z"/>
+            </svg>
+          </label>
+          <label class="nutrition-form__owner-label input-label-text">
+            Телефон:*
+            <input class="nutrition-form__owner-input input-label-text" type="text" name="phone" value="8 (960) 900-60-90" required>
+            <svg class="nutrition-form__owner-input-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#a)" fill="currentColor">
+                <path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1a.7.7 0 0 0 0-.9l-3.1-3.1-.9.9 2.1 2ZM8.1 19.4v-6.2a.6.6 0 0 0-.6-.6H3.1a1.2 1.2 0 0 0 1.2 1.2h2.5v5H3.1a1.8 1.8 0 0 1-1.9-1.7v-14a1.8 1.8 0 0 1 1.7-1.8h3.9v5H4.4a1.2 1.2 0 0 0-1.2 1.2h4.4a.6.6 0 0 0 .6-.6V.6a.9.9 0 0 0-.7-.6H3.1A3 3 0 0 0 0 2.9v13.9a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/>
+              </g>
+              <defs><clipPath id="a"><path fill="currentColor" d="M0 0h20v20H0z"/></clipPath></defs>
+            </svg>
+          </label>
+        </fieldset>
+
+        <fieldset class="nutrition-form__comment">
+          <legend class="nutrition-form__title line-marked-heading">Комментарий</legend>
+          <label class="visually-hidden" for="nutrition-form-comment">Ваш комментарий:</label>
+          <textarea class="nutrition-form__comment-area input-label-text" name="nutrition-comment" id="nutrition-form-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+        <fieldset class="nutrition-form__additional">
+          <legend class="nutrition-form__title line-marked-heading">Дополнительно</legend>
+          <ul class="nutrition-form__additional-list">
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="sweetener" checked>
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title input-label-text">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="drinking-water">
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title input-label-text">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="milk">
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title input-label-text">Молоко</span>
+              </label>
+            </li>
+            <li class="nutrition-form__additional-item">
+              <label class="nutrition-form__additional-control">
+                <input class="nutrition-form__additional-control-input visually-hidden" type="checkbox" name="vitamins">
+                <span class="nutrition-form__additional-control-mark"></span>
+                <span class="nutrition-form__additional-control-title input-label-text">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="nutrition-form__bottom-wrapper">
+          <button class="nutrition-form__apply-button main-button oswald-font-text" type="submit">Отправить заявку</button>
+          <span class="nutrition-form__note arial-font-text">* — Обязательные поля</span>
+        </div>
+      </form>
+
+      <section class="contacts contacts--dark">
+        <div class="contacts__heading">
+          <h2 class="contacts__title oswald-font-text">Приглашаем<br> к сотрудничеству<br> дилеров!</h2>
+          <address class="contacts__address arial-font-text">
+            <span class="contacts__address-city">ул. Большая<br> Конюшенная, д. 19/8</span>
+            <span class="contacts__address-city">Санкт-Петербург</span>
+          </address>
+        </div>
+        <div class="contacts__map-container">
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003044!2d30.320858716036227!3d59.93871916905428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1660813482717!5m2!1sen!2sru"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <a class="main-footer__company-name-logo" href="index.html">
+        <img src="img/company-name-logo-mobile.svg" width="128" height="24" alt="Cat Energy">
+      </a>
+
+      <ul class="main-footer__social-list">
+        <div class="main-footer__social-list-wrapper">
+          <li class="main-footer__social-item">
+            <a class="main-footer__button" href="https://vk.com/htmlacademy">
+              <svg class="main-footer__icon" aria-hidden="true" focusable="false" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.34c0-.86.52-1.32 1.55-1.38l3.97.02c.26 0 .44.13.53.38.4 1.26.86 2.34 1.37 3.25.5.92 1.17 1.97 1.99 3.16.07.15.18.23.34.23.13 0 .22-.06.3-.18l.07-.28.03-4.35c0-.3-.07-.5-.23-.6-.15-.1-.43-.18-.83-.23-.32-.05-.48-.23-.48-.55 0-.07 0-.12.02-.15.38-1.09 1.44-1.63 3.2-1.63l1.5-.03c.67 0 1.23.16 1.67.48.44.32.67.82.67 1.5v5.72c.12.08.24.12.34.12.27 0 .5-.15.7-.45 1.95-2.58 3-4.31 3.17-5.18 0-.02.01-.06.05-.13.12-.25.33-.47.61-.65.29-.19.53-.31.75-.38a.55.55 0 0 1 .24-.05h4.13l.26.03c.36 0 .63.16.83.47.07.1.12.21.15.33a2.4 2.4 0 0 1 .06.55v.18a6.11 6.11 0 0 1-.94 2.2c-.5.78-1.15 1.62-1.93 2.53-.79.9-1.27 1.5-1.47 1.78-.16.2-.24.39-.24.56 0 .13.07.28.21.45l3.9 4.63c.2.26.31.56.31.88 0 .38-.16.7-.48.95-.32.25-.7.4-1.14.43l-.46.02h-4.04c-.02 0-.06 0-.11.02a.86.86 0 0 1-.1.01c-.4 0-.76-.16-1.1-.48-.12-.13-.96-1.12-2.5-2.97a1.39 1.39 0 0 0-.38-.32 38.47 38.47 0 0 0-.53 2.24l-.08.42a1.4 1.4 0 0 1-1.12 1.06l-.37.02h-2.61c-1.48 0-2.95-.63-4.41-1.9a19.3 19.3 0 0 1-3.96-4.95 47.51 47.51 0 0 1-3.28-7.05A1.92 1.92 0 0 1 1 5.34Zm16.01 6.51c-.37 0-.7-.1-1.01-.29a.9.9 0 0 1-.45-.79V5c0-.34-.1-.58-.27-.72-.18-.14-.49-.21-.93-.21l-1.52.05c-.76 0-1.34.12-1.73.37.78.36 1.17.93 1.17 1.71v4.43a1.5 1.5 0 0 1-.53 1.04c-.32.28-.68.42-1.07.42-.53 0-.94-.24-1.22-.73a26.16 26.16 0 0 1-3.1-5.63l-.23-.66-3.55-.02c-.23 0-.36.01-.38.03-.03.03-.04.1-.04.22 0 .15.01.3.05.48l.56 1.4c1.49 3.64 3.11 6.51 4.86 8.6 1.75 2.1 3.47 3.15 5.16 3.15h2.66c.1 0 .19-.03.24-.09.05-.06.1-.17.13-.34l.06-.25.5-2.21c.15-.3.27-.5.38-.6.2-.2.42-.28.69-.28.43 0 .86.24 1.3.73l2.27 2.71c.14.22.3.33.45.33h4.4c.53 0 .8-.13.8-.38a.47.47 0 0 0-.08-.25l-3.87-4.55c-.3-.35-.45-.73-.45-1.13 0-.4.14-.8.43-1.16.23-.34.68-.9 1.34-1.67.67-.78 1.25-1.51 1.75-2.19.5-.68.82-1.3.98-1.85l.08-.33a.37.37 0 0 1-.02-.16c0-.07-.01-.14-.03-.19h-4.18c-.27.1-.48.25-.64.45L21.8 6c-.45 1.16-1.6 2.94-3.5 5.36-.36.33-.8.5-1.3.5Z"/>
+              </svg>
+              <span class="visually-hidden">ВКонтакте.</span>
+            </a>
+          </li>
+          <li class="main-footer__social-item">
+            <a class="main-footer__button" href="https://www.youtube.com/user/htmlacademyru">
+              <svg class="main-footer__icon" aria-hidden="true" focusable="false" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m17.9 10.8-5.3-3.5a.7.7 0 0 0-1 .5v7a.7.7 0 0 0 1 .6l5.3-3.5a.7.7 0 0 0 0-1.1Zm-5 2.8V9.1l3.4 2.2-3.4 2.3ZM25.4 5a2.4 2.4 0 0 0-1.5-1.6C20.2 2 14.3 2 14 2c-.3 0-6.2 0-10 1.4A2.4 2.4 0 0 0 2.7 5C2.3 6.1 2 8 2 11.3s.3 5.3.6 6.3a2.4 2.4 0 0 0 1.5 1.7c3.7 1.4 9.6 1.4 9.9 1.4.8 0 6.4 0 10-1.4a2.4 2.4 0 0 0 1.4-1.7c.3-1 .6-3 .6-6.3 0-3.2-.3-5.2-.6-6.3ZM24 17.3a1 1 0 0 1-.6.7C20 19.4 14 19.4 14 19.4c0 0-6 0-9.5-1.4a1 1 0 0 1-.6-.7c-.3-1-.6-2.8-.6-6 0-3 .3-5 .6-6a1 1 0 0 1 .6-.7C8 3.3 14 3.3 14 3.3c0 0 6 0 9.5 1.3a1 1 0 0 1 .6.8c.3 1 .6 2.8.6 6 0 3-.3 4.9-.6 6Z"/>
+              </svg>
+              <span class="visually-hidden">YouTube.</span>
+            </a>
+          </li>
+          <li class="main-footer__social-item">
+            <a class="main-footer__button" href="https://t.me/htmlacademy">
+              <svg class="main-footer__icon" aria-hidden="true" focusable="false" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.46 3.15c.18.15.27.38.23.61l-2.63 15.76a.66.66 0 0 1-1.01.44l-7.88-5.25a.66.66 0 0 1-.15-.96l2.61-3.26-4.36 2.9a.66.66 0 0 1-.65.05L4.36 10.8a.66.66 0 0 1 .08-1.2l18.38-6.57a.66.66 0 0 1 .64.11ZM6.33 10.32l3.53 1.77 7.56-5.04a.66.66 0 0 1 .88.96l-4.8 6 6.43 4.3 2.28-13.66-15.88 5.67Z"/>
+              </svg>
+              <span class="visually-hidden">Telegram.</span>
+            </a>
+          </li>
+        </div>
+      </ul>
+
+      <div class="main-footer__academy">
+        <a class="main-footer__academy-company-name-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/html-academy-company-name-logo.svg" width="114" height="18" alt="HTML Academy.">
+        </a>
+
+        <a class="main-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg width="27" height="34" viewBox="0 0 27 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/>
+          </svg>
+          <span class="visually-hidden">Логотип HTML Academy.</span>
+        </a>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
