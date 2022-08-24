@@ -1,25 +1,41 @@
 .main-button {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  // font-size: 14px;
+  // line-height: 18px;
   display: block;
   box-sizing: border-box;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  background-color: #68b738;
+  background-color: @basic-green;
   color: #ffffff;
   border: none;
-  min-height: 40px;
+  // min-height: 40px;
   width: 280px;
-  padding: 11px;
+  // padding: 11px;
   align-content: center;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     min-height: 52px;
     width: 282px;
-    font-size: 20px;
-    line-height: 22px;
+    // font-size: 20px;
+    // line-height: 20px;
+    // padding: 14px;
+    // padding-left: 26px;
+    // padding-right: 26px;
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

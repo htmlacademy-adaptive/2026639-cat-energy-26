@@ -8,6 +8,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 30px;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -44,6 +45,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 0;
     padding: 52px;
     padding-top: 77px;
@@ -140,6 +143,7 @@
 }
 
 .articles__link {
+  position: relative;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
@@ -148,7 +152,7 @@
   color: #000000;
   padding-top: 4px;
   padding-bottom: 4px;
-  padding-right: 58px;
+  padding-right: 48px;
 
   &::after {
     position: absolute;
@@ -156,9 +160,11 @@
     background-image: url("../img/article-link-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
-    transform: translateX(17px);
+    right: 8px;
     width: 24px;
     height: 17px;
+    transform-origin: left;
+    transition: transform 0.2s 0.2s ease-in-out;
   }
 
   @media (min-width: @tablet-width) {
@@ -166,19 +172,37 @@
     line-height: 30px;
     margin-top: auto;
     margin-bottom: 0;
+    padding-right: 57px;
 
     &::after {
-      transform: translateX(25px);
       width: 24px;
       height: 30px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    align-self: flex-start;
+    padding-right: 60px;
+
     &::after {
-      transform: translateX(28px);
       width: 24px;
       height: 30px;
     }
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1.33);
+    }
+  }
+
+  &:focus {
+    &::after {
+      transform: scaleX(1.33);
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
