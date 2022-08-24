@@ -16,24 +16,25 @@
 }
 
 .additional-goods__title {
+  position: relative;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: #000000;
   margin: 0;
   padding-bottom: 36px;
-  border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
     padding: 0;
-    padding-left: 37px;
+    margin-left: 40px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 0;
     margin-bottom: 81px;
   }
 }
@@ -75,6 +76,10 @@
   padding-top: 13px;
   padding-bottom: 19px;
   border-bottom: 1px solid #ebebeb;
+
+  &:first-child {
+    border-top: 1px solid #ebebeb;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 38px;

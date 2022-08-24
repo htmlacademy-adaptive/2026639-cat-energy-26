@@ -83,10 +83,25 @@
 }
 
 .show-more__link {
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  width: 100%;
   margin-top: auto;
   margin-bottom: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .show-more__title {
@@ -106,10 +121,6 @@
     line-height: 22px;
     width: 167px;
     margin-bottom: 23px;
-  }
-
-  @media (min-width: @desktop-width) {
-
   }
 }
 
