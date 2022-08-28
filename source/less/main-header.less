@@ -52,53 +52,17 @@
   padding-right: 10px;
 }
 
-.main-header__company-name-logo-mobile {
+.main-header__company-name-logo {
   margin-left: auto;
   margin-right: auto;
-}
 
-@media (max-width: @tablet-width - 1) {
-  .main-header__logo-tablet {
-    display: none;
-  }
-
-  .main-header__logo-desktop {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
-  .main-header__logo-mobile {
-    display: none;
-  }
-
-  .main-header__company-name-logo-mobile {
-    display: none;
-  }
-
-  .main-header__logo-desktop {
-    display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-header__logo-mobile {
-    display: none;
-  }
-
-  .main-header__company-name-logo-mobile {
-    display: none;
-  }
-
-  .main-header__logo-tablet {
-    display: none;
-  }
-}
-
-.main-header__logo-mobile,
-.main-header__company-name-logo-mobile,
-.main-header__logo-tablet,
-.main-header__logo-desktop {
+.main-header__logo,
+.main-header__company-name-logo {
   &:hover {
     opacity: 0.8;
   }
