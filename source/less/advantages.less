@@ -77,8 +77,12 @@
     min-height: 280px;
     padding-top: 151px;
     padding-left: 0;
-    margin-right: 85px;
+    margin-right: 79px;
     margin-bottom: 37px;
+
+    &:not(:last-child) {
+      margin-bottom: 37px;
+    }
 
     &::before {
       transform: translateY(-111px);
@@ -134,4 +138,14 @@
   color: #444444;
   z-index: 1;
   position: relative;
+
+  br {
+    display: none
+  }
+
+  @media (min-width: @tablet-width)  and (max-width: @desktop-width) {
+    br {
+      display: block;
+    }
+  }
 }
