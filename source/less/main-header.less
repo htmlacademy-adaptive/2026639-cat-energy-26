@@ -23,8 +23,8 @@
     min-height: @main-header-desktop-min-height;
     background-color: transparent;
     padding: 110px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 53px;
+    padding-bottom: 7px;
     z-index: 1;
   }
 }
@@ -32,9 +32,9 @@
 .main-header__logo-wrapper {
   margin: 0;
   margin-left: 20px;
-  margin-right: 64px;
-  padding-top: 10px;
-  padding-bottom: 13px;
+  margin-right: 55px;
+  padding-top: 12px;
+  padding-bottom: 7px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -47,9 +47,8 @@
   }
 }
 
-.main-header__logo-mobile {
-  margin-left: 0;
-  padding-right: 10px;
+.main-header__logo {
+  margin-bottom: 4px;
 }
 
 .main-header__company-name-logo {
@@ -86,14 +85,16 @@
   z-index: 2;
   flex-grow: 1;
   position: absolute;
-  right: 15px;
+  right: 14px;
+  top: 14px;
 
   @media (min-width: @tablet-width) {
     display: block;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 30px;
     right: auto;
+    top: auto;
     margin-left: auto;
     position: relative;
     flex-grow: 0;
@@ -102,7 +103,7 @@
   @media (min-width: @desktop-width) {
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 31px;
     background-color: transparent;
   }
 }
@@ -221,7 +222,7 @@
   width: 320px;
 
   @media (max-width: @tablet-width - 1) {
-    transform: translateX(-100%) translateX(49px);
+    transform: translateX(-100%) translateX(48px);
   }
 
   @media (min-width: @tablet-width) {
@@ -249,11 +250,12 @@
 .main-header__nav--closed .main-header__nav-list {
   @media (max-width: @tablet-width - 1) {
     display: none;
+    box-sizing: border-box;
   }
 }
 
 .main-header__nav-item {
-  min-height: 66px;
+  min-height: 65px;
   text-align: center;
 
   @media (max-width: @tablet-width - 1) {
@@ -269,7 +271,7 @@
     border: none;
 
     &:not(:last-child) {
-      margin-right: 35px;
+      margin-right: 37px;
     }
   }
 
@@ -295,7 +297,7 @@
 .main-header__nav-link {
   display: block;
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   text-decoration: none;
   color: #000000;
 
@@ -312,8 +314,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 3px;
+    padding-bottom: 4px;
   }
 
   @media (min-width: @desktop-width) {
