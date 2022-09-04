@@ -32,7 +32,7 @@
 .nutrition-form__cat {
   margin: 0;
   padding: 20px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
 
@@ -74,14 +74,14 @@
   flex-grow: 1;
   margin-left: 0;
   margin-right: 0;
-  padding: 16px;
+  padding: 17px;
   padding-top: 13px;
   padding-bottom: 14px;
   border: 1px solid @input-border-color;
 
   @media (min-width: @tablet-width) {
     height: 52px;
-    margin-left: 14px;
+    margin-left: 10px;
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -103,14 +103,14 @@
 .nutrition-form__goal {
   margin: 0;
   padding: 20px;
-  padding-top: 29px;
-  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 23px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
     padding: 28px;
-    padding-top: 30px;
+    padding-top: 28px;
     padding-bottom: 30px;
     margin-bottom: 75px;
     border: 1px solid #e7e7e7;
@@ -128,7 +128,7 @@
 }
 
 .nutrition-form__goal-item:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 23px;
@@ -174,6 +174,7 @@
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -203,7 +204,7 @@
   margin-top: 26px;
   padding: 20px;
   padding-top: 35px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   border: none;
 
   @media (min-width: @tablet-width) {
@@ -266,20 +267,22 @@
   flex-grow: 1;
   margin: 0;
   margin-left: 12px;
-  padding: 16px;
+  padding: 13px;
   padding-top: 13px;
   padding-bottom: 14px;
   padding-right: 52px;
   border: 1px solid @input-border-color;
 
   @media (min-width: @tablet-width) {
+    padding: 18px;
     height: 52px;
+    margin-left: 17px;
   }
 }
 
 .nutrition-form__owner-input-icon {
   position: absolute;
-  right: 19px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   color: #222222;
@@ -316,7 +319,7 @@
     margin: 0;
     padding: 0;
     padding-top: 14px;
-    padding-bottom: 65px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -327,7 +330,7 @@
 .nutrition-form__comment-area {
   box-sizing: border-box;
   margin: 0;
-  padding: 10px;
+  padding: 7px;
   padding-left: 15px;
   padding-right: 12px;
   width: 100%;
@@ -360,16 +363,16 @@
 
 .nutrition-form__additional {
   margin: 0;
-  margin-top: 23px;
+  margin-top: 19px;
   padding: 20px;
-  padding-top: 39px;
+  padding-top: 35px;
   padding-bottom: 21px;
   border: none;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
-    padding-bottom: 59px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -385,7 +388,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 32px;
+    grid-row-gap: 24px;
     grid-column-gap: 61px;
   }
 
@@ -397,7 +400,7 @@
 
 .nutrition-form__additional-item {
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 19px;
   }
 }
 
@@ -439,6 +442,7 @@
   border: 1px solid #cdcdcd;
   top: 50%;
   transform: translateY(-50%);
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -470,7 +474,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    grid-column-gap: 81px;
+    grid-column-gap: 61px;
   }
 }
 
@@ -478,14 +482,17 @@
   font-size: 16px;
   line-height: 20px;
   padding: 7px;
-  margin-top: 20px;
+  margin-top: 17px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 21px;
+  width: 280px;
+  min-height: 40px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     margin: 0;
+    min-height: 51px;
   }
 
   @media (min-width: @desktop-width) {
