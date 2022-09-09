@@ -61,13 +61,13 @@
 
         <div class="welcome__image-link-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x" width="552" height="499">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x" width="709" height="609">
-            <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x" width="280" height="270">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/index-can-desktop.webp 1x, img/content/index-can-desktop@2x.webp 2x" width="552" height="499">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/index-can-tablet.webp 1x, img/content/index-can-tablet@2x.webp 2x" width="709" height="609">
+            <source type="image/webp" srcset="img/content/index-can-mobile.webp 1x, img/content/index-can-mobile@2x.webp 2x" width="280" height="270">
 
-            <source media="(min-width: 1200px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x" width="552" height="499">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x" width="709" height="609">
-            <img class="welcome__image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Баночка Cat Energy Pro со вкусом курицы.">
+            <source media="(min-width: 1200px)" srcset="img/content/index-can-desktop.png 1x, img/content/index-can-desktop@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="img/content/index-can-tablet.png 1x, img/content/index-can-tablet@2x.png 2x" width="709" height="609">
+            <img class="welcome__image" src="img/content/index-can-mobile.png" srcset="img/content/index-can-mobile@2x.png 2x" width="280" height="270" alt="Баночка Cat Energy Pro со вкусом курицы.">
           </picture>
 
           <a class="welcome__link main-button oswald-font-text" href="form.html">Подобрать программу</a>
@@ -142,12 +142,22 @@
         <div class="slider">
           <ul class="slider__list">
             <li class="slider__before">
-              <img class="slider__image slider__image--mobile slider__image--before" src="img/before-cat-mobile.png" alt="Толстый кот.">
-              <img class="slider__image slider__image--tablet slider__image--before" src="img/before-cat-tablet.png" alt="Толстый кот.">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/before-cat-tablet.webp 1x, img/content/before-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/content/before-cat-mobile.webp 1x, img/content/before-cat-mobile@2x.webp 2x" width="280" height="256">
+
+                <source media="(min-width: 768px)" srcset="img/content/before-cat-tablet.png 1x, img/content/before-cat-tablet@2x.png 2x" width="560" height="512">
+                <img class="slider__image slider__image--before" src="img/content/before-cat-mobile.png" srcset="img/content/before-cat-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот.">
+              </picture>
             </li>
             <li class="slider__after">
-              <img class="slider__image slider__image--mobile slider__image--after" src="img/after-cat-mobile.png" alt="Стройный кот.">
-              <img class="slider__image slider__image--tablet slider__image--after" src="img/after-cat-tablet.png" alt="Стройный кот.">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/after-cat-tablet.webp 1x, img/content/after-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/content/after-cat-mobile.webp 1x, img/content/after-cat-mobile@2x.webp 2x" width="280" height="256">
+
+                <source media="(min-width: 768px)" srcset="img/content/after-cat-tablet.png 1x, img/content/after-cat-tablet@2x.png 2x" width="560" height="512">
+                <img class="slider__image slider__image--after" src="img/content/after-cat-mobile.png" srcset="img/content/after-cat-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот.">
+              </picture>
             </li>
           </ul>
 
@@ -183,7 +193,7 @@
           <li class="main-footer__social-item">
             <a class="main-footer__button" href="https://vk.com/htmlacademy">
               <svg class="main-footer__icon" width="28" height="22" fill="currentColor">
-                <use href="img/sprite.svg#vk-icon"></use>
+                <use href="img/sprite/sprite.svg#vk-logo"></use>
               </svg>
               <span class="visually-hidden">ВКонтакте.</span>
             </a>
@@ -191,7 +201,7 @@
           <li class="main-footer__social-item">
             <a class="main-footer__button" href="https://www.youtube.com/user/htmlacademyru">
               <svg class="main-footer__icon" width="28" height="22" fill="currentColor">
-                <use href="img/sprite.svg#yt-icon"></use>
+                <use href="img/sprite/sprite.svg#yt-logo"></use>
               </svg>
               <span class="visually-hidden">YouTube.</span>
             </a>
@@ -199,7 +209,7 @@
           <li class="main-footer__social-item">
             <a class="main-footer__button" href="https://t.me/htmlacademy">
               <svg class="main-footer__icon" width="28" height="22" fill="currentColor">
-                <use href="img/sprite.svg#tg-icon"></use>
+                <use href="img/sprite/sprite.svg#tg-logo"></use>
               </svg>
               <span class="visually-hidden">Telegram.</span>
             </a>
@@ -214,7 +224,7 @@
 
         <a class="main-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
           <svg width="27" height="34" fill="currentColor">
-            <use href="img/sprite.svg#htmlacademy-icon"></use>
+            <use href="img/sprite/sprite.svg#html-academy-logo"></use>
           </svg>
           <span class="visually-hidden">Логотип HTML Academy.</span>
         </a>
