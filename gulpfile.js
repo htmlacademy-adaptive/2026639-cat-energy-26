@@ -4,6 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
+import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
@@ -31,6 +32,7 @@ export const styles = () => {
 
 export const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
@@ -51,18 +53,18 @@ export const optimizeImages = () => {
 }
 
 export const copyImages = () => {
-  return gulp.src('source/img/content/*.{png,jpg}')
-  .pipe(gulp.dest('build/img/content'))
+  return gulp.src('source/img/**/*.{png,jpg}')
+  .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
 export const createWebp = () => {
-  return gulp.src('source/img/content/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh({
     webp: {}
   }))
-  .pipe(gulp.dest('build/img/content'))
+  .pipe(gulp.dest('build/img'))
 }
 
 // SVG

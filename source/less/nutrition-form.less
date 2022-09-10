@@ -51,6 +51,7 @@
 
 .nutrition-form__cat-input-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
 
   &:not(:last-child) {
@@ -65,6 +66,7 @@
 .nutrition-form__cat-label {
   inline-size: max-content;
   margin-right: 12px;
+  max-width: 280px;
 }
 
 .nutrition-form__cat-input {
@@ -165,10 +167,10 @@
 }
 
 .nutrition-form__goal-control-title {
-  margin-left: 45px;
+  padding-left: 45px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 60px;
+    padding-left: 60px;
   }
 }
 
@@ -235,6 +237,7 @@
   line-height: 26px;
   color: #000000;
   padding: 0;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -525,7 +528,7 @@
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  word-wrap: break-word;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
