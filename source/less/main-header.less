@@ -228,6 +228,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
     position: relative;
     width: 500px;
     top: auto;
@@ -298,7 +299,10 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 23px;
+  padding-left: 22px;
+  padding-right: 22px;
   text-decoration: none;
+  word-break: break-word;
   color: #000000;
 
   &:hover {
@@ -316,6 +320,8 @@
   @media (min-width: @tablet-width) {
     padding-top: 3px;
     padding-bottom: 4px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: @desktop-width) {
