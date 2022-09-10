@@ -47,9 +47,9 @@ export const scripts = () => {
 // Images
 
 export const optimizeImages = () => {
-  return gulp.src('source/img/content/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
-  .pipe(gulp.dest('build/img/content'))
+  .pipe(gulp.dest('build/img'))
 }
 
 export const copyImages = () => {
