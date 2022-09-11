@@ -7,24 +7,38 @@
 @advantages-background-size-desktop: @advantages-background-size-tablet;
 
 .advantages {
-  background-color: #ffffff;
-  padding: 20px;
-  padding-top: 10px;
-  padding-bottom: 53px;
-  counter-reset: advantages-item-counter;
-
   @media (min-width: @tablet-width) {
-    padding: 30px;
-    padding-top: 15px;
-    padding-bottom: 10px;
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop-width) {
+    border: none;
+  }
+}
+
+.advantages__wrapper {
+  background-color: #ffffff;
+  width: @mobile-width;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 53px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  counter-reset: advantages-item-counter;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
     padding: 110px;
     padding-top: 15px;
     padding-bottom: 32px;
-    border: none;
   }
 }
 
