@@ -25,15 +25,15 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: absolute;
     box-sizing: border-box;
     background-color: #ffffff;
     padding: 80px;
     padding-top: 60px;
     padding-bottom: 56px;
-    position: absolute;
     width: 565px;
     top: 95px;
-    left: 110px;
+    left: calc(110px + (100vw - @desktop-width) / 2);
   }
 }
 

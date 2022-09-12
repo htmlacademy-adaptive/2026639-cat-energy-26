@@ -1,19 +1,5 @@
 .additional-goods {
-  padding: 20px;
-  padding-top: 25px;
-  padding-bottom: 35px;
 
-  @media (min-width: @tablet-width) {
-    padding: 30px;
-    padding-top: 15px;
-    padding-bottom: 76px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 110px;
-    padding-top: 15px;
-    padding-bottom: 86px;
-  }
 }
 
 .additional-goods__title {
@@ -38,6 +24,30 @@
   @media (min-width: @desktop-width) {
     margin-left: 0;
     margin-bottom: 81px;
+  }
+}
+
+.additional-goods__wrapper {
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 110px;
+    padding-top: 15px;
+    padding-bottom: 86px;
   }
 }
 
