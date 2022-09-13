@@ -1,30 +1,4 @@
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
+@import "fonts.less";
 @import "variables.less";
 @import "page.less";
 @import "oswald-font-text.less";
@@ -52,3 +26,14 @@
 @import "secondary-button.less";
 @import "promo.less";
 @import "line-marked-heading.less";
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
