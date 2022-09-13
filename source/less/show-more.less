@@ -1,13 +1,24 @@
 .show-more {
+  border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.show-more__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: @mobile-width;
   padding: 20px;
   padding-top: 78px;
   padding-bottom: 22px;
-  border-bottom: 1px solid #ebebeb;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 
   &::before {
     position: absolute;
@@ -36,8 +47,8 @@
     box-sizing: border-box;
     width: 324px;
     padding: 38px;
-    padding-top: 234px;
-    padding-bottom: 40px;
+    padding-top: 233px;
+    padding-bottom: 39px;
 
     &::before {
       width: 60px;
@@ -116,6 +127,7 @@
   margin-bottom: 8px;
   word-wrap: break-word;
   letter-spacing: 0.03px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -133,11 +145,12 @@
   text-align: center;
   margin: 0;
   margin-bottom: 21px;
-  word-wrap: break-word;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 18px;
     width: 167px;
+    margin-bottom: 87px;
   }
 }

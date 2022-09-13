@@ -1,21 +1,3 @@
-.additional-goods {
-  padding: 20px;
-  padding-top: 25px;
-  padding-bottom: 35px;
-
-  @media (min-width: @tablet-width) {
-    padding: 30px;
-    padding-top: 15px;
-    padding-bottom: 76px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 110px;
-    padding-top: 15px;
-    padding-bottom: 86px;
-  }
-}
-
 .additional-goods__title {
   position: relative;
   font-weight: 400;
@@ -24,6 +6,7 @@
   color: #000000;
   margin: 0;
   padding-bottom: 33px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -37,6 +20,30 @@
   @media (min-width: @desktop-width) {
     margin-left: 0;
     margin-bottom: 81px;
+  }
+}
+
+.additional-goods__wrapper {
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 110px;
+    padding-top: 15px;
+    padding-bottom: 86px;
   }
 }
 
@@ -59,7 +66,7 @@
     grid-template-columns: 1fr;
     grid-row-gap: 0;
     border: 1px solid #cdcdcd;
-    margin-bottom: 65px;
+    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,7 +106,7 @@
   }
 }
 
-.additional__goods-item-wrapper {
+.additional-goods__item-wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
@@ -107,14 +114,14 @@
   }
 }
 
-.additional__goods-title-description-price-wrapper {
+.additional-goods__title-description-price-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -123,7 +130,7 @@
   }
 }
 
-.additional__goods-title-description-wrapper {
+.additional-goods__title-description-wrapper {
   display: flex;
   flex-direction: column;
 
@@ -142,6 +149,7 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 13px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -161,6 +169,7 @@
   line-height: 14px;
   color: #444444;
   margin: 0;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -181,6 +190,7 @@
   line-height: 14px;
   color: #444444;
   margin: 0;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
