@@ -1,18 +1,30 @@
 .catalog-page-heading {
-  padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
   border-bottom: 1px solid #ebebeb;
   border-top: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.catalog-page-heading__wrapper {
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
     padding: 30px;
     padding-top: 33px;
     padding-bottom: 75px;
-    border: none;
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     padding: 110px;
     padding-top: 61px;
     padding-bottom: 60px;

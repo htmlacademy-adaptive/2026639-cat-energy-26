@@ -1,42 +1,21 @@
 .welcome {
-  display: flex;
   position: relative;
-  flex-direction: column;
-  padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    background-image: none;
-    padding-top: 32px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    position: relative;
-    min-height: 471px;
-    padding-top: 96px;
-    padding-left: 110px;
-    padding-right: 110px;
-    background-position: -50 -50;
-  }
 }
 
 .welcome__background {
   position: absolute;
   left: 0;
   top: 0;
-  width: 320px;
+  width: 100%;
   height: 302px;
   background-color: @basic-green;
   background-image: url("../img/welcome-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
+  background-size: 100%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/welcome-background-mobile@2x.jpg");
-    background-size: 100% auto;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
@@ -45,18 +24,50 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    left: 50%;
+    width: auto;
     top: -@main-header-desktop-min-height;
-    width: 720px;
+    left: 50%;
+    right: 0;
     height: 694px;
     background-image: url("../img/welcome-background-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: left;
+    background-size: 100% auto;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/welcome-background-desktop@2x.jpg");
-      background-size: 100% auto;
     }
+  }
+}
+
+.welcome__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 1;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: @tablet-width;
+    background-image: none;
+    padding-top: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: @desktop-width;
+    min-height: 567px;
+    padding-top: 96px;
+    padding-left: 110px;
+    padding-right: 110px;
+    background-position: -50 -50;
   }
 }
 
